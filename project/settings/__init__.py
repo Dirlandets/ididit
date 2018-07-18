@@ -1,5 +1,7 @@
 import os
-if os.environ['DEBUG']:
+DEBUG = os.environ['DEBUG']
+
+if DEBUG == 'True':
     from .base import *
-else:
+elif DEBUG == 'False':
     from .prodaction import *
